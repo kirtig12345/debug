@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collector Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+<header class="page-header">
+
+<a href="index.html" class="back-link">
+← Back
+</a>
+
+<div class="logo">
+<span class="logo-icon">🚛</span>
+<h1>Collector Portal</h1>
+</div>
+
+</header>
+
+<form id="collectionForm">
+
+<div class="form-card">
+
+<h2>👷 Collector</h2>
+
+<div class="form-group">
+<label>Collector ID</label>
+<input type="text" id="collectorId" placeholder="C001" required>
+</div>
+
+</div>
+
+<div class="form-card">
+
+<h2>🏠 House</h2>
+
+<div class="form-group">
+<label>House ID</label>
+<input type="text" id="houseId" placeholder="H001" required>
+</div>
+
+</div>
+
+<div class="form-card">
+
+<h2>🗑️ Waste Type</h2>
+
+<div class="form-group">
+
+<select id="wasteType" required>
+<option value="">Select Waste Type</option>
+<option value="wet">Wet Waste Only</option>
+<option value="dry">Dry Waste Only</option>
+<option value="segregated">Wet + Dry Separated</option>
+<option value="mixed">Mixed Waste</option>
+</select>
+
+</div>
+
+</div>
+
+<div class="form-card">
+
+<h2>📍 GPS</h2>
+
+<button type="button" id="captureGps" class="btn btn-secondary">
+Capture GPS
+</button>
+
+<div id="gpsDisplay" class="gps-display hidden">
+
+<p>
+<strong>Latitude:</strong>
+<span id="latitude"></span>
+</p>
+
+<p>
+<strong>Longitude:</strong>
+<span id="longitude"></span>
+</p>
+
+<p>
+<strong>Accuracy:</strong>
+<span id="accuracy"></span>
+</p>
+
+</div>
+
+<input type="hidden" id="gpsLat">
+<input type="hidden" id="gpsLng">
+
+</div>
+
+<div class="form-card">
+
+<h2>📸 Photo</h2>
+
+<label for="photoUpload" class="upload-label">
+<span class="upload-icon">📷</span>
+<span>Upload Photo</span>
+</label>
+
+<input type="file" id="photoUpload" class="file-input" accept="image/*">
+
+<div id="photoPreview" class="photo-preview hidden">
+<img id="previewImg">
+</div>
+
+</div>
+
+<button class="btn btn-primary btn-large">
+Submit Collection
+</button>
+
+</form>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

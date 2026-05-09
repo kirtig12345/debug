@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resident Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+<header class="page-header">
+
+<a href="index.html" class="back-link">
+← Back
+</a>
+
+<div class="logo">
+<span class="logo-icon">🏠</span>
+<h1>Resident Dashboard</h1>
+</div>
+
+</header>
+
+<div class="form-card">
+
+<h2>🔍 Search House</h2>
+
+<div class="search-group">
+<input type="text" id="searchHouseId" placeholder="Enter House ID">
+<button onclick="searchHouse()" class="btn btn-primary">Search</button>
+</div>
+
+</div>
+
+<div id="residentData" class="hidden">
+
+<div class="stats-row">
+
+<div class="stat-card">
+<h3>🏆 Cleanliness Score</h3>
+<div class="score-display">
+<span id="cleanlinessScore" class="score-value">100</span>
+</div>
+<div class="score-bar">
+<div id="scoreProgress" class="score-progress"></div>
+</div>
+</div>
+
+<div class="stat-card">
+<h3>📊 Waste Stats</h3>
+
+<div class="mini-stats">
+
+<div class="mini-stat">
+<span id="wetCount" class="mini-value wet">0</span>
+<span>Wet</span>
+</div>
+
+<div class="mini-stat">
+<span id="dryCount" class="mini-value dry">0</span>
+<span>Dry</span>
+</div>
+
+<div class="mini-stat">
+<span id="segregatedCount" class="mini-value segregated">0</span>
+<span>Separated</span>
+</div>
+
+<div class="mini-stat">
+<span id="mixedCount" class="mini-value mixed">0</span>
+<span>Mixed</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="form-card">
+
+<h2>📋 Collection History</h2>
+
+<div class="table-wrapper">
+
+<table class="data-table">
+
+<thead>
+<tr>
+<th>Date</th>
+<th>Waste</th>
+<th>Collector</th>
+</tr>
+</thead>
+
+<tbody id="historyBody"></tbody>
+
+</table>
+
+</div>
+
+</div>
+
+<div class="form-card">
+<h2>⚠️ Report Missed Collection</h2>
+<button onclick="reportMissed()" class="btn btn-warning">
+Report Missed Collection
+</button>
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
